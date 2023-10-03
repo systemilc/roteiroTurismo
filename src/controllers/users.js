@@ -1,13 +1,13 @@
 const { procurarUsuarioPorEmail } = require("../functions/functions");
 
-const cadastrarUsuario = (req, res)=>{
+const cadastrarUsuario = async (req, res)=>{
     const {nome, email, senha} = req.body;
 
     if(!nome || !email || !senha){
        return res.status(400).json({mensagem: "Todos os campos são obrigatórios"});
     };
 
-    const emailExistente = procurarUsuarioPorEmail(email);
+    const emailExistente = await procurarUsuarioPorEmail(email);
 
     if(emailExistente){
         return res.status(400).json({mensagem: "E-mail ou Senha Inválido"});

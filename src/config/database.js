@@ -9,4 +9,4 @@ const pool = new Pool({
   password
 });
 
-module.exports = pool
+module.exports = pool  

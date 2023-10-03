@@ -1,4 +1,4 @@
-const { pool } = require("../config/database")
+const  pool  = require("../config/database")
 
 const procurarUsuarioPorEmail = async (email)=>{
     const texto =  `SELECT id FROM usuarios WHERE email = $1;`
