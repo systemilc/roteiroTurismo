@@ -1,5 +1,5 @@
 const express = require('express')
-const { cadastrarUsuario } = require('../controllers/users')
+const { cadastrarUsuario } = require('../app/controllers/usersController')
 const rotas = express()
 
 rotas.post('/usuario', cadastrarUsuario)
